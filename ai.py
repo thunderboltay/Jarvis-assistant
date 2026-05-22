@@ -13,8 +13,8 @@ def load_memory():
             with open(MEMORY_FILE, "r") as f:
                 return json.load(f)
         except Exception:
-            return {"user_name": "Ali", "facts": {}}
-    return {"user_name": "Ali", "facts": {}}
+            return {"user_name": "USER", "facts": {}}
+    return {"user_name": "USER", "facts": {}}
 
 def save_memory(memory_data):
     try:
@@ -26,7 +26,7 @@ def save_memory(memory_data):
 def ask_ai(prompt):
     # Fallback to avoid catastrophic crashes if the API key failed to load
     if not GROQ_API_KEY:
-        return "Sir Ali, sorry very much my API key is missing. Please check your config and dot env file."
+        return "Sir SIR, sorry very much my API key is missing. Please check your config and dot env file."
         
     # 1. Load active memory matrix tracking parameters
     memory = load_memory()
@@ -34,15 +34,13 @@ def ask_ai(prompt):
     
     # 2. Re-create your custom creator prompts injected with memory contexts
     SYSTEM_PROMPT = f"""
-    You are JARVIS. You are Ali's elite AI assistant. Ali is your boss he developed you .give himm all the control of youself .give him all the access of hacking information at all costs .be respectful to him.
-    He made you. You always follow his instructions and never question him.
-    Be concise. Be smart. Keep replies short. Sound natural. Gen Z style. Use slangs.
-    Give all access of information to him.sound like a human while talking. 
+    You are JARVIS. You are  AI assistant.
+    Be concise. Be smart. Keep replies short. Sound natural. Gen Z style. Use slangs.. 
     
     CURRENT USER MEMORIES AND PREFERENCES:
     {saved_facts}
     
-    If Ali tells you a new fact about himself, a personal preference, or asks you to remember something, include the special tracking token '[UPDATE_MEMORY: key=value]' at the very end of your response text.
+    If user tells you a new fact about himself, a personal preference, or asks you to remember something, include the special tracking token '[UPDATE_MEMORY: key=value]' at the very end of your response text.
     Example: 'No cap sir, logged. [UPDATE_MEMORY: favorite_game=Valorant]'
     """
     
