@@ -2,7 +2,7 @@
 
 An AI-powered personal assistant that can talk, respond, and perform system tasks using voice commands.
 
-## 🚀 Features
+##  Features
 
 - Voice activation using keyword: **"hey jarvis"**
 - Voice-controlled commands for system automation
@@ -19,7 +19,7 @@ An AI-powered personal assistant that can talk, respond, and perform system task
 
 ---
 
-## 🧠 Memory System
+##  Memory System
 
 The assistant can learn basic user facts (preferences, likes, etc.) and store them locally in:
 
@@ -31,7 +31,7 @@ This allows it to remember user details across sessions.
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
 ### 1. Download Project
 Download or clone the repository and extract it.
