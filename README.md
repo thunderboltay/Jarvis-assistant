@@ -43,6 +43,9 @@ Open the extracted folder in **Visual Studio Code**
 Run the following command in terminal:
 
 ```bash
+### no 1 cmnd
+.venv\Scripts\Activate.ps1
+### no 2 cmnd
 pip install winrt-runtime winrt windows.UI.Notifications winrt-windows.UI.Notifications.Management
 pip install SpeechRecognition pyttsx3 pyautogui python-dotenv groq pyaudio pywin32 pygame edge-tts pydub imageio-ffmpeg
 🔑 API Setup
